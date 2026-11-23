@@ -1,0 +1,26 @@
+{
+  "data": "A1,\"line one\nline two\"\nA2,second\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 2,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "B1"
+    },
+    {
+      "byte_offset": 33,
+      "line": 3
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "data": "K1,\"line one\nline two\"\nK2,plain\nK3,\"say \"\"hi\"\"\"\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 0,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "K1"
+    },
+    {
+      "byte_offset": 48,
+      "sentinel": true
+    }
+  ]
+}

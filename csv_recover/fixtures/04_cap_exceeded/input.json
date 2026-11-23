@@ -1,0 +1,26 @@
+{
+  "data": "C1,\"aaa\nbbb\nC2,\"ccc\nddd\nC3,ok\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 0,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "C1"
+    },
+    {
+      "byte_offset": 30,
+      "line": 4
+    }
+  ]
+}

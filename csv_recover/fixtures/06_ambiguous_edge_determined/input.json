@@ -1,0 +1,35 @@
+{
+  "data": "E1,safe1\nE2,safe2\nD1,\"aa\nbb\nD2,cc\nD3,ee\nE7,safe7\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 3,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "E1"
+    },
+    {
+      "byte_offset": 18,
+      "line": 3,
+      "expect_first_column": "D1"
+    },
+    {
+      "byte_offset": 40,
+      "expect_first_column": "E7"
+    },
+    {
+      "byte_offset": 49,
+      "line": 7
+    }
+  ]
+}

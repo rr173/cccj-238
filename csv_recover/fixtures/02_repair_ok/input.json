@@ -1,0 +1,26 @@
+{
+  "data": "A1,\"hello\nworld\nA2,second\nA3,third\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 1,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "A1"
+    },
+    {
+      "byte_offset": 35,
+      "sentinel": true
+    }
+  ]
+}

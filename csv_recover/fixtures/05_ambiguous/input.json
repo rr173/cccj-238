@@ -1,0 +1,25 @@
+{
+  "data": "D1,\"aaa\nbbb\nD2,ccc\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 2,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "D1"
+    },
+    {
+      "byte_offset": 19
+    }
+  ]
+}

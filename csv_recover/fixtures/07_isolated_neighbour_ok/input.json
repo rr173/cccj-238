@@ -1,0 +1,31 @@
+{
+  "data": "F1,brok\"en\nF2,x\nG1,\"multi\nline\"\nG2,plain\n",
+  "columns": [
+    {
+      "name": "id",
+      "required": true,
+      "regex": "[A-Za-z0-9]+(;[A-Za-z0-9]+)*"
+    },
+    {
+      "name": "note",
+      "required": false
+    }
+  ],
+  "repair_cap": 1,
+  "anchors": [
+    {
+      "byte_offset": 0,
+      "line": 1,
+      "expect_first_column": "F1"
+    },
+    {
+      "byte_offset": 16,
+      "line": 3,
+      "expect_first_column": "G1"
+    },
+    {
+      "byte_offset": 41,
+      "line": 5
+    }
+  ]
+}
